@@ -91,7 +91,6 @@
                     if(boolean==true){
                     var reloadButton = document.getElementById('reload');
                     item.replaceChild(textNode,item.childNodes[0]);
-                    //reloadButton.parentElement.removeChild(reloadButton);
                     reloadButton.src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4c4.png";
                     }
                     else{
@@ -102,22 +101,10 @@
             }
             function selectFavCharacter(ev){
                 ev.target.parentElement.setAttribute('onclick','');
-                //for(i=0;i<document.getElementsByClassName('slot').length;i++){
                 document.getElementsByClassName('fav-slot')[0].innerHTML=ev.target.parentElement.innerHTML;
                 var slotId = document.getElementsByClassName('fav-slot')[0].id;
                 var imageId = ev.target.id;
-
-                if(slotId!=imageId){
-                    boolean = false;
-                    console.log(slotId);
-                    console.log(imageId);
-                    console.log(boolean);
-                   }
-                   else{
-                    console.log(boolean);
-                   }
                 ev.target.parentElement.innerHTML='';
-                //}
                 if(document.getElementsByClassName('fav-slot')[document.getElementsByClassName('fav-slot').length-1].childNodes.length!=0){
                         document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                     
