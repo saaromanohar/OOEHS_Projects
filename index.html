@@ -102,9 +102,11 @@
                     }
                 }
                 if(document.getElementsByClassName('slot')[document.getElementsByClassName('slot').length-1].childNodes.length!=0){
+                    document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                     Task2Completed=true;
                     if(Task1Completed==true){
-                        document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
+                        
+                        /**Validation**/
                         var textNode = document.createTextNode("Well Done !!");
                         var textNode1 = document.createTextNode("You are almost there! Try Again");
                         var item = document.getElementById('result');
@@ -142,6 +144,8 @@
                     document.getElementsByClassName('char-pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                     Task1Completed=true;
                     if(task2Completed==true){
+                        
+                        /**Validation**/
                         var textNode = document.createTextNode("Well Done !!");
                         var textNode1 = document.createTextNode("You are almost there! Try Again");
                         var item = document.getElementById('result');
