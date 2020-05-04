@@ -101,12 +101,12 @@
             }
             function selectFavCharacter(ev){
                 ev.target.parentElement.setAttribute('onclick','');
-                document.getElementsByClassName('fav-slot')[2].innerHTML=ev.target.parentElement.innerHTML;
-                var slotId = document.getElementsByClassName('fav-slot')[2].id;
+                document.getElementsByClassName('fav-slot')[0].innerHTML=ev.target.parentElement.innerHTML;
+                var slotId = document.getElementsByClassName('fav-slot')[0].id;
                 var imageId = ev.target.id;
                 ev.target.parentElement.innerHTML='';
                 if(document.getElementsByClassName('fav-slot')[document.getElementsByClassName('fav-slot').length-1].childNodes.length!=0){
-                        document.getElementsByClassName('pic')[2].parentElement.parentElement.parentElement.innerHTML='';
+                        document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                     
                 }
             }
