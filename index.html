@@ -104,7 +104,7 @@
                 for(i=0;i<document.getElementsByClassName('fav-slot').length;i++){
                     if(document.getElementsByClassName('fav-slot')[i].childNodes.length==0){
                         document.getElementsByClassName('fav-slot')[i].innerHTML=ev.target.parentElement.innerHTML;
-                        var slotId = document.getElementsByClassName('slot')[i].id;
+                        var slotId = document.getElementsByClassName('fav-slot')[i].id;
                         var imageId = ev.target.id;
                         
                         if(slotId!=imageId){
