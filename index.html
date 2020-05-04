@@ -91,11 +91,12 @@
                         var slotId = document.getElementsByClassName('slot')[i].id;
                         var imageId = ev.target.id;
                         
+                        /**Validation**/
                         if(slotId!=imageId){
                             boolean = false;
                            }
                            else{
-                            console.log(boolean1);
+                            console.log(boolean);
                            }
                         ev.target.parentElement.innerHTML='';
                         break;
@@ -106,7 +107,7 @@
                     Task2Completed=true;
                     if(Task1Completed==true){
                         
-                        /**Validation**/
+                        /**Report**/
                         var textNode = document.createTextNode("Well Done !!");
                         var textNode1 = document.createTextNode("You are almost there! Try Again");
                         var item = document.getElementById('result');
@@ -130,11 +131,12 @@
                         document.getElementsByClassName('char-slot')[i].innerHTML=ev.target.parentElement.innerHTML;
                         var imageId = ev.target.id;
                         
+                        /**Validation**/
                         if(imageId=='wrong'){
                             boolean = false;
                            }
                            else{
-                            console.log(boolean2);
+                            console.log(boolean);
                            }
                         ev.target.parentElement.innerHTML='';
                         break;
@@ -145,7 +147,7 @@
                     Task1Completed=true;
                     if(task2Completed==true){
                         
-                        /**Validation**/
+                        /**Report**/
                         var textNode = document.createTextNode("Well Done !!");
                         var textNode1 = document.createTextNode("You are almost there! Try Again");
                         var item = document.getElementById('result');
