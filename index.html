@@ -99,23 +99,16 @@
                     
                 }
             }
-          function selectFavCharacter(ev){
+            function selectFavCharacter(ev){
                 ev.target.parentElement.setAttribute('onclick','');
-                for(i=0;i<document.getElementsByClassName('fav-slot').length;i++){
-                    if(document.getElementsByClassName('fav-slot')[i].childNodes.length==0){
-                        document.getElementsByClassName('fav-slot')[i].innerHTML=ev.target.parentElement.innerHTML;
-                        var slotId = document.getElementsByClassName('fav-slot')[i].id;
-                        var imageId = ev.target.id;
-                        
-                        if(slotId!=imageId){
-                            boolean = false;
-                            console.log(slotId);
-                            console.log(imageId);
-                            console.log(boolean);
-                           }
-                           else{
-                            console.log(boolean);
-                           }
+                document.getElementsByClassName('fav-slot')[2].innerHTML=ev.target.parentElement.innerHTML;
+                var slotId = document.getElementsByClassName('fav-slot')[2].id;
+                var imageId = ev.target.id;
+                ev.target.parentElement.innerHTML='';
+                if(document.getElementsByClassName('fav-slot')[document.getElementsByClassName('fav-slot').length-1].childNodes.length!=0){
+                        document.getElementsByClassName('pic')[2].parentElement.parentElement.parentElement.innerHTML='';
+                    
+                }
             }
         </script>
     </head>
@@ -128,29 +121,18 @@
                  <H1>Are you my Mother?</H1>
             <H3>Story Activity</H3>
            
-            <H5>1. Identify the characters from the Story.</H5>
-             <table>
-                      <tr>
-                    <td><div class = 'label'>1</div></td>
-                    <td><div class = 'label'>2</div></td>
-                    <td><div class = 'label'>3</div></td>
-                
-                </tr>
-                
+            <H5>1. Identify the character from the Story.</H5>
+            <table>
                 <tr>
                     <td><div class = 'fav-slot' id = "Slot1"></div></td>
-                    <td><div class = 'fav-slot' id = "Slot2"></div></td>
-                    <td><div class = 'fav-slot' id = "Slot3"></div></td>
-                
                 </tr>
             </table>
             <table>
                 <tr>
-                    <td><div class = 'pic' onclick="placeMyImage(event)"><img id = "Slot2" width = 300 height =300 src = "2.png"></div></td>
-                    <td><div class = 'pic' onclick="placeMyImage(event)"><img id = "Slot3" width = 300 height =300 src = "3.jpg"></div></td>
-                    <td><div class = 'pic' onclick="placeMyImage(event)"><img id = "Slot1" width = 300 height =300 src = "1.png"></div></td>
-                    <td><div class = 'pic' onclick="placeMyImage(event)"><img id = "Slot4" width = 300 height =300 src = "4.jpg"></div></td>
-                </tr>
+                    <td><div class = 'pic' onclick="selectFavCharacter(event)"><img width = 300 height =300 src = "4.jpg"></div></td>
+                    <td><div class = 'pic' onclick="selectFavCharacter(event)"><img width = 300 height =300 src = "1.png"></div></td>
+                    <td><div class = 'pic' onclick="selectFavCharacter(event)"><img width = 300 height =300 src = "2.png"></div></td>
+                    <td><div class = 'pic' onclick="selectFavCharacter(event)"><img width = 300 height =300 src = "3.jpg"></div></td>
             </table>
             <H5>2. Choose the pictures in correct order.</H5>
             <table>
