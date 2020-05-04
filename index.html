@@ -74,8 +74,9 @@
         </style>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script>
-            var boolean1 = true;
-            var boolean2 = true;
+            var boolean = true;
+            var task1Completed = false;
+            var task2Completed = false;
             /*This method reloads the page*/
             function reload(){
                 document.location.reload();
@@ -91,7 +92,7 @@
                         var imageId = ev.target.id;
                         
                         if(slotId!=imageId){
-                            boolean1 = false;
+                            boolean = false;
                            }
                            else{
                             console.log(boolean1);
@@ -101,19 +102,21 @@
                     }
                 }
                 if(document.getElementsByClassName('slot')[document.getElementsByClassName('slot').length-1].childNodes.length!=0){
+                    Task2Completed=true;
+                    if(Task1Completed){
                         document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
-                    var textNode = document.createTextNode("Well Done !!");
-                    var textNode1 = document.createTextNode("You are almost there! Try Again");
-                    var item = document.getElementById('result');
-                    if(boolean1==true){
-                    var reloadButton = document.getElementById('reload');
-                    item.replaceChild(textNode,item.childNodes[0]);
-                    reloadButton.src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4c4.png";
+                        var textNode = document.createTextNode("Well Done !!");
+                        var textNode1 = document.createTextNode("You are almost there! Try Again");
+                        var item = document.getElementById('result');
+                        if(boolean==true){
+                            var reloadButton = document.getElementById('reload');
+                            item.replaceChild(textNode,item.childNodes[0]);
+                            reloadButton.src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4c4.png";
+                        }
+                        else{
+                            item.replaceChild(textNode1,item.childNodes[0]);
+                        }
                     }
-                    else{
-                        item.replaceChild(textNode1,item.childNodes[0]);
-                    }
-                    
                 }
             }
             
@@ -126,7 +129,7 @@
                         var imageId = ev.target.id;
                         
                         if(imageId=='wrong'){
-                            boolean2 = false;
+                            boolean = false;
                            }
                            else{
                             console.log(boolean2);
@@ -136,19 +139,21 @@
                     }
                 }
                 if(document.getElementsByClassName('char-slot')[document.getElementsByClassName('char-slot').length-1].childNodes.length!=0){
-                        document.getElementsByClassName('char-pic')[0].parentElement.parentElement.parentElement.innerHTML='';
-                    var textNode = document.createTextNode("Well Done !!");
-                    var textNode1 = document.createTextNode("You are almost there! Try Again");
-                    var item = document.getElementById('result');
-                    if(boolean2==true){
-                    var reloadButton = document.getElementById('reload');
-                    item.replaceChild(textNode,item.childNodes[0]);
-                    reloadButton.src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4c4.png";
+                    document.getElementsByClassName('char-pic')[0].parentElement.parentElement.parentElement.innerHTML='';
+                    Task1Completed=true;
+                    if(task2Completed){
+                        var textNode = document.createTextNode("Well Done !!");
+                        var textNode1 = document.createTextNode("You are almost there! Try Again");
+                        var item = document.getElementById('result');
+                        if(boolean==true){
+                            var reloadButton = document.getElementById('reload');
+                            item.replaceChild(textNode,item.childNodes[0]);
+                            reloadButton.src="https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c4c4.png";
+                        }
+                        else{
+                            item.replaceChild(textNode1,item.childNodes[0]);
+                        }
                     }
-                    else{
-                        item.replaceChild(textNode1,item.childNodes[0]);
-                    }
-                    
                 }
             }
         </script>
