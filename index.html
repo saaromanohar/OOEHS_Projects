@@ -100,7 +100,7 @@
                         break;
                     }
                 }
-                if(document.getElementsByClassName('slot')[document.getElementsByClassName('slot').length-2].childNodes.length!=0){
+                if(document.getElementsByClassName('slot')[document.getElementsByClassName('slot').length-1].childNodes.length!=0){
                         document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                     var textNode = document.createTextNode("Well Done !!");
                     var textNode1 = document.createTextNode("You are almost there! Try Again");
@@ -129,7 +129,7 @@
                             boolean2 = false;
                            }
                            else{
-                            console.log(boolean);
+                            console.log(boolean2);
                            }
                         ev.target.parentElement.innerHTML='';
                         break;
