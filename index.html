@@ -103,7 +103,7 @@
                 }
                 if(document.getElementsByClassName('slot')[document.getElementsByClassName('slot').length-1].childNodes.length!=0){
                     Task2Completed=true;
-                    if(Task1Completed){
+                    if(Task1Completed==true){
                         document.getElementsByClassName('pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                         var textNode = document.createTextNode("Well Done !!");
                         var textNode1 = document.createTextNode("You are almost there! Try Again");
@@ -141,7 +141,7 @@
                 if(document.getElementsByClassName('char-slot')[document.getElementsByClassName('char-slot').length-1].childNodes.length!=0){
                     document.getElementsByClassName('char-pic')[0].parentElement.parentElement.parentElement.innerHTML='';
                     Task1Completed=true;
-                    if(task2Completed){
+                    if(task2Completed==true){
                         var textNode = document.createTextNode("Well Done !!");
                         var textNode1 = document.createTextNode("You are almost there! Try Again");
                         var item = document.getElementById('result');
